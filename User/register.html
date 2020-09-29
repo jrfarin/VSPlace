@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Venca Place</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    <!-- DatePicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./wwwroot/styles/css/main.min.css"> 
+    <style>
+      
+    </style>   
+</head>
+
+<body>
+    <main class="container mt-5 mb-5">
+        <section class="row" id="vcRegister">
+            <div class="col col-md-6 offset-md-3">
+                <h1 class="FS-35vh font-weight-light text-uppercase text-center">Crear mi cuenta</h1>
+                <p class="FS-20vh font-weight-light text-center pt-3 pb-3 mt-3 border-top border-bottom">Crear tu cuenta te tomará menos de 2 minutos. Podrás disfrutar de muchas <strong>ventajas</strong>: obtener <strong>ofertas y promociones</strong> exclusivas, acceder antes que nadie a nuestras <strong>novedades</strong> y muchos beneficios más.</p>
+                
+                <form action="/register" method="post">
+                    <div class="form-row">
+                        <!-- First name -->
+                        <div class="col">                       
+                            <div class="md-form mt-0">
+                                <input class="form-control" id="Name" name="Name" type="text">
+                                <label for="Name">Nombre *</label>
+                            </div>
+                        </div>
+                        <!-- Last name -->
+                        <div class="col">
+                            <div class="md-form mt-0">
+                                <input class="form-control" id="CompleteSurname" name="CompleteSurname" type="text">
+                                <label for="nom1">Apellidos *</label>
+                            </div>
+                        </div>                      
+                    </div>
+                    <!-- Email -->
+                    <div class="md-form mt-0">
+                        <input class="form-control" id="Email" name="Email" type="email">
+                        <label for="Email">E-mail *</label>
+                    </div>
+                    <!-- Password -->
+                    <div class="md-form">
+                        <i class="far fa-eye" id="showPassword" ></i>
+                        <input class="form-control" id="Password"  id="Password" name="Password" type="password" aria-describedby="vencaRegisterFormPasswordHelpBlock">
+                        <label for="Password">Password *</label>
+                        <small id="vencalRegisterFormPasswordHelpBlock" class="form-text text-muted text-center mb-4">Mínimo 6 caracteres sin símbolos</small>
+                    </div>
+                    <!-- Birthday & Genre  -->     
+                    <div class="md-form mt-0">
+                        <i class="far fa-calendar-alt" id="calendar"></i>
+                        <input class="form-control" id="datepicker" type="text">
+                        <label for="datepicker">Fecha de nacimiento <small class="pl-1">(opcional)</small></label>  
+                    </div>
+                    <!-- Genre -->   
+                    <div class="col text-left px-0 mt-2">             
+                        <label class="d-block text-left border-bottom pb-1 mt-1 mb-4">Tratamiento <small class="pl-1">(opcional)</small></label>                  
+                        <!-- Female-->
+                        <div class="custom-control custom-radio custom-control-inline pr-5">
+                            <input type="radio" class="custom-control-input" id="female" name="Gender" checked>
+                            <label class="custom-control-label" for="defaultInline1">Mujer</label>
+                        </div>
+                        <!-- Male -->
+                        <div class="custom-control custom-radio custom-control-inline pl-5">
+                            <input type="radio" class="custom-control-input" id="male" name="Gender">
+                            <label class="custom-control-label" for="defaultInline2">Hombre</label>
+                        </div>                
+                    </div>
+                    
+                    <div class="col px-0">
+                        <hr>
+                        <p class="FS-17vh font-weight-bold text-left ">* Campo obligatorio</p>
+                    </div>
+                    <div class="col">
+                        <p class="FS-15vh font-weight-light text-justify mt-4">
+                            <span class="bold text-uppercase cDefault">Información sobre el tratamiento de sus datos personales.</span> El 
+                            <span class="font-weight-bold">responsable</span> del tratamiento es 
+                            <span class="text-uppercase">Digital Lola Commerce, S.A.U.(Venca)</span>. La 
+                            <span class="font-weight-bold">finalidad</span> del tratamiento es remitirle comunicaciones comerciales propias y, con su consentimiento, de terceras empresas colaboradoras de los sectores de actividad incluidos en nuestra política de privacidad. Puede ejercer sus 
+                            <span class="font-weight-bold">derechos</span> en matería de protección de datos contactando con nosostros. Para mas información acceda 
+                            <a href="/quienes-somos#privacy-policy" class="font-weight-bold">aquí</a>.
+                        </p>
+                    </div>
+                    <div class="col mt-4">
+                        <button type="submit" class="btn btn-dark vc-button FS-25vh shadow-none" id="toRegister">crear mi cuenta</button>
+                    </div>
+                </form>
+            </div>       
+        </section>
+    </main>
+        
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <!-- DatePicker -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="./wwwroot/js/main.js"></script>
+
+    <script type="text/javascript">
+        $.datepicker.regional['es'] = {
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1
+        };
+        $(function () {
+            $.datepicker.setDefaults($.datepicker.regional["es"]);
+            $('#datepicker').datepicker({
+                showAnim: "slide",
+                yearRange: '2000:c+1' ,
+                changeYear: true,
+                minDate: new Date(2001, 12 - 1, 1),
+                maxDate: '+50Y'
+            });
+        });
+    </script>
+
+</body>
+</html>

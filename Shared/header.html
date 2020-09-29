@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header VencaShop</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../wwwroot/styles/css/main.min.css">
+    <style>   
+        .FS-09 {
+            font-size: .9rem !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="callToActions"> 
+        <!-- CTA's Navbar -->
+        <nav class="navbar navbar-light bg-white shadow-none mt-2">
+
+            <!-- Triger Right Menu -->
+            <div class="triger-menu d-block d-md-none">
+                <!-- <button id="closeMenu" class="navbar-toggler" type="button">
+                    <span><i class="fas fa-times fa-2x vc-color"></i></span>
+                </button> -->
+                <button id="openMenu" class="navbar-toggler" type="button">
+                    <span><i class="fas fa-bars fa-2x"></i></span>
+                </button>
+            </div>
+
+            <!-- Main Header Bar -->
+            <div class="container">
+                <div class="row flex-grow-1 w-100">
+                    <!-- Logo -->
+                    <div id="logo" class="col-4 col-md-3 pl-4">
+                        <a class="navbar-brand" asp-area=""  asp-controller="Home"  asp-action="Index" asp-route-culture="@System.Globalization.CultureInfo.CurrentUICulture.Name">
+                            <img src="https://venca.es/Content/images/logo_new.png" width="120" alt="Venca logo">
+                        </a>   
+                    </div>
+
+                    <!-- Form Search -->
+                    <div id="vc-navbar-search" class="col-12 col-md-4 col-lg-5 px-2 d-none d-md-block">      
+                        <form asp-route="empathy" asp-route-culture="@System.Globalization.CultureInfo.CurrentUICulture.Name" class="form-search" method="GET">
+                            <input autocomplete="off" class="vc-navbar-input col-10 font-weight-light border-0 pb-2 mt-2" id="search" spellcheck="false" type="text" placeholder="Buscar por referencia, producto..." name="q" autofocus>
+                            <i class=" fas fa-search FS-11 pt-2"></i> 
+                        </form>            
+                    </div>
+                    
+                    <!-- CTA's Navbar -->
+                    <div id="ctasZone" class="col-8 col-md-5 col-lg-4 pr-0">
+                        <ul class="list-unstyled d-flex flex-row justify-content-between align-items-center navbar-nav pt-1 pl-3">
+                            <li class="font-weight-light text-uppercase text-center d-none d-md-block">
+                                <span class="ship-to">
+                                    <i class="fas fa-globe FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate">ship to</span>
+                                </span>
+                            </li>                      
+                            <li class="font-weight-light text-uppercase text-center --syte-start-camera-upload" id="camera" data-toggle="tooltip" data-placement="bottom" data-trigger="hover" title="¡BUSCA POR FOTO!" data-track-event="">
+                                <span class="syte-camera">
+                                    <i class="vc-color fa fa-camera FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate hide">New</span>
+                                </span>
+                            </li>
+                            <li class="font-weight-light text-uppercase text-center d-none d-md-block" id="helpHeader">
+                                <span class="info" data-ob-directive="Shared.OpenLinkDirective" data-ob-params="" rel="nofollow">
+                                    <i class="fas fa-info-circle FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate">Ayuda</span>
+                                </span>
+                            </li>
+                            <li class="font-weight-light text-uppercase text-center" id="WishMenu">
+                                <span class="heart" data-ob-directive="Shared.OpenLinkDirective" data-ob-params="" data-track-event="">
+                                    <i class="fas fa-heart FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate hide">Favoritos</span>
+                                </span>
+                            </li>
+                            <li class="font-weight-light text-uppercase text-center" id="userZone">
+                                <span class="user" data-toggle="dropdown">
+                                    <i class="fas fa-user FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate hide">ITFE</span>
+                                </span>
+                                <ul class="dropdown-menu text-uppercase myAccountRepos">
+                                    <li><span data-ob-directive="Shared.OpenLinkDirective" data-ob-params="" rel="nofollow">mi cuenta</span></li>
+                                    <li><span data-ob-directive="Shared.OpenLinkDirective" data-ob-params="" rel="nofollow">salir</span></li>
+                                </ul>
+                            </li>
+                            <li class="d-block d-md-none" id="searchIconMB" data-toggle="collapse" data-target="#navigationMB" aria-controls="navigationMB" aria-expanded="false" aria-label="Toggle navigation">
+                                <span><i class="fas fa-search FS-20"></i> </span>
+                            </li>
+                            <li class="position-relative font-weight-light text-uppercase text-center" id="cartZone">
+                                <span class="shopping-bag" data-ob-directive="Shared.OpenLinkDirective" data-ob-params="" rel="nofollow">
+                                    <i class="fas fa-shopping-bag FS-20"></i>
+                                    <span class="FS-075 d-block text-truncate hide">mi cesta</span>
+                                </span>
+                                <sup class="position-absolute">
+                                    <i class="fa fa-circle fa-stack-2x vc-color"></i>
+                                    <strong class="position-relative text-white" style="top:2px; left:6px;">2</strong>
+                                </sup>
+                            </li>
+                        </ul>
+                    </div>      
+                </div>
+                
+                <!-- Collapse Search Box -->
+                <div class="row flex-grow-1 w-100" style="height: 0;">
+                    <div class="col-12 px-0">
+                        <!-- Collapsible content -->
+                        <nav class="navbar navbar-light bg-white shadow-none px-0">
+                            <div class="collapse navbar-collapse" id="navigationMB">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <!-- Form Search -->
+                                        <div id="vc-navbar-search" class="col-12 col-md-5 border-bottom px-2 mb-2">      
+                                            <form asp-route="empathy" asp-route-culture="@System.Globalization.CultureInfo.CurrentUICulture.Name" class="form-search" method="GET">
+                                                <input autocomplete="off" class="vc-navbar-input col-9 font-weight-light border-0 pb-2 mt-2" id="search" spellcheck="false" type="text" placeholder="Buscar por referencia, producto..." name="q" autofocus>
+                                                <i class=" fas fa-search FS-125 pt-2"></i>
+                                                <i class="vc-color fa fa-camera FS-125 pt-2 pl-3"></i> 
+                                            </form>            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>     
+            </div>
+        </nav>
+
+        <!-- Right Overlay -->
+        <div class="row">
+            <div class="col-12">
+                <div id="menuMB" class="overlay d-block d-md-none">   
+                    <div class="overlay-content">
+
+                        <!-- Close Panel -->
+                        <div class="row">
+                            <div class="col-12 px-5 py-2">
+                                <button id="closeMenu" class="navbar-toggler" type="button">
+                                    <span><img src="../wwwroot/img/times-medium.svg" alt="" width="16"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Search -->
+                        <div class="row">
+                            <div id="vc-navbar-search-menu" class="col-12 px-5 mb-2">      
+                                <form asp-route="empathy" asp-route-culture="@System.Globalization.CultureInfo.CurrentUICulture.Name" class="form-search d-flex justify-content-between border-bottom pb-1" method="GET">
+                                    <input autocomplete="off" class="vc-navbar-input col-9 font-weight-light border-0 pb-2 mt-2" id="search" spellcheck="false" type="text" placeholder="Buscar por referencia, producto..." name="q" autofocus>
+                                    <div class="w-25 d-flex justify-content-around align-items-center">
+                                        <img src="../wwwroot/img/search.svg" alt="" width="22">
+                                        <img src="../wwwroot/img/camera-black.svg" alt="" width="22">
+                                    </div>                               
+                                </form>            
+                            </div>
+                        </div>
+
+
+                        <!-- Accordion Navigation Nodes -->
+                        <div class="row">
+                            <div class="col-12 pl-5">
+                                <div class="accordion" id="accordionMenuMB">
+                                    <div class="vc-card border-bottom">
+                                        <div class="vc-card-header bg-white border-0" id="heading1"> 
+                                                <button type="button" class="btn btn-link justify-content-start FS-1 text-uppercase px-2" data-toggle="collapse" data-target="#node1" aria-expanded="false" aria-controls="collapseheading1">
+                                                <span><img src="../wwwroot/img/nodo_03.png"></span>
+                                                <span class="font-weight-bold pl-3">Mujer</span>
+                                                <i class="vc-color fas fa-plus pr-3 ml-auto"></i>
+                                            </button>
+                                        </div>
+                                        <div id="node1" class="collapse" aria-labelledby="headingheading@nodeView.Id" data-parent="#accordionMenuMB">
+                                            <div class="card-body pl-4 ml-5">
+                                                <ul class="list-unstyled">
+                                                    <span class="d-block text-uppercase font-weight-bold mb-2">Toda la colección</span>
+                                                    <li class="ml-4"><a href="" class="py-3 pl-0">Vestidos</a></li>
+                                                    <li class="ml-4"><a href="" class="py-3 pl-0">Camisetas y Tops</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row bg-light">
+                                    <ul class="col-12 list-unstyled mb-0">
+                                        <li class="d-flex align-items-center border-bottom pl-3">
+                                            <i class="fas fa-user FS-15"></i>
+                                            <a href="" class="FS-09 font-weight-normal text-uppercase py-3">User</a>
+                                        </li>
+                                        <li class="d-flex align-items-center border-bottom pl-3">
+                                            <i class="fas fa-info-circle FS-15"></i>
+                                            <a href="" class="FS-09 font-weight-normal text-uppercase py-3">Ayuda</a>
+                                        </li>
+                                        <li class="d-flex align-items-center border-bottom pl-3">
+                                            <i class="fas fa-globe FS-15"></i>
+                                            <a href="" class="FS-09 font-weight-normal text-uppercase py-3">Ship To</a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>
+                        </div>
+                                
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+        
+    </header>
+
+    <main class="container" role="main">
+        <div class="container" style="height: 280px;background: purple;">
+            <div class="row">
+                <div class="col-12"></div>
+            </div>
+        </div>
+        <div class="container mt-2" style="height: 280px;background: lavender;">
+            <div class="row">
+                <div class="col-12"></div>
+            </div>
+        </div>
+    </main>
+   
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="../wwwroot/js/common.js"></script>
+
+    <script>
+        var menuMB = document.querySelector('#menuMB');
+        // var headerBar = document.querySelector('#callToActions .container')
+        // var trigerMenu = document.querySelector('.triger-menu')
+        // var openMenu = document.getElementById('openMenu');
+        // var closeMenu = document.getElementById('closeMenu');
+        // var mainContent = document.querySelector('main[role="main"]');
+
+        document.querySelector('#openMenu').addEventListener('click', function(){
+            menuMB.style.width = "100vw";
+            // trigerMenu.style.marginLeft = "275px";
+            // headerBar.style.cssText = 'opacity: .3; margin-left: 275px;';
+            // mainContent.style.cssText = 'opacity: .3; margin-left: 275px;';
+            // closeMenu.classList.add('z-index-3000');
+            // this.classList.remove('z-index-3000');
+        });
+
+        document.querySelector('#closeMenu').addEventListener('click', function(){
+            menuMB.style.width = "0";
+            // trigerMenu.style.marginLeft = "0";
+            // headerBar.style.cssText = 'opacity: 1; margin-left: 0;';
+            // mainContent.style.cssText = 'opacity: 1; margin-left: 0;';
+            // openMenu.classList.add('z-index-3000');
+            // this.classList.remove('z-index-3000');
+        });
+    </script>
+</body>
+
+</html>

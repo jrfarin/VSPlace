@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Venca Place</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../wwwroot/styles/css/main.min.css">
+    <style>
+        .carousel-inner img {
+            cursor: url('../wwwroot/img/plus-zoom.png'), zoom-in;
+        }
+        .breadcrumb-item.active {
+            color: #050606;
+        }
+    </style>    
+</head>
+
+<body>  
+    <main class="container mt-5 mb-5">
+        <article id="vcProduct">
+            
+            <!-- Breadcrumbs -->
+            <section class="row" id="breadcrumbs"">
+                <div class="col">
+                    <!-- <a href="/">Inicio</a><i class="fas fa-angle-right"></i>
+                    <a href="/e/19/camisetas-y-tops#referencetopaginate=15C033963">Sofas</a><i class="fas fa-angle-right"></i>
+                    <strong>Sofá corner "Dublin" con funcionalidades de cama</strong> -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                          <li class="breadcrumb-item"><a href="#">Sofas</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Sofá corner "Dublin" con funcionalidades de cama</li>
+                        </ol>
+                      </nav>
+                </div>
+                
+            </section>
+
+            <!-- Carousel Main Product -->
+            <section class="row mt-1">
+                <div class="col col-sm-8" id="mainProductImg">
+                    <div class="row antiVoffset5">       
+                        <div class="col">                   
+                            <div id="carouselHome" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="#" data-toggle="modal" data-target="#productImage">
+                                            <img src="../wwwroot/img/sofas.jpg" alt="..." class="d-block w-100">
+                                        </a>                         
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="#" data-toggle="modal" data-target="#productImage">
+                                            <img src="../wwwroot/img/sofas.jpg" alt="..." class="d-block w-100">
+                                        </a>                            
+                                    </div>                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <a href="#" class="d-flex justify-content-end" data-toggle="modal" data-target="#productImage">
+                                <span>
+                                    <i class="fas fa-search-plus FS-30vh" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>                         
+                </div>
+
+                <div class="col col-sm-4 mt-1" id="asideFeatures">
+                    <span class="FS-30vh font-weight-normal">VencaShop</span>
+                    <h1 class="FS-25vh font-weight-light mt-3">Sofa Corner "Dublín", opcionalmente con función de cama</h1>
+                    <div class="pull-right">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span id="integerPricePart" class="bigPrice thin">499</span><sup id="decimalPricePart" class="mediumPrice super">99€</sup>
+                            </li>
+                            <div class="storeFrontsPreviousPrice pull-right" id="previousPriceText">899,99€</div>
+                        </ul>
+                    </div>
+                    <form action="/Cart/AddProductByAjax" data-ob-directive="Product.AddProductDirective" data-ob-model="productJS" data-ob-params="{&quot;timeToHide&quot;:5000}" method="post"><input id="storefrontBreadCrumbId" name="storefrontBreadCrumbId" type="hidden" value="33"><input id="nodeId" name="nodeId" type="hidden" value="5"><input data-val="true" data-val-required="" id="IsChicSizeSpace" name="IsChicSizeSpace" type="hidden" value="False">        <button id="addToBasket" class="btn btn-inline btn-lg dark voffset4 antiVoffset4 addCart" type="button">
+                        <span class="add">Añadir</span>
+                        <span class="added"><i class="fa fa-check fa-lg pr-2"></i><span>Añadido</span></span>
+                        <span class="soldOut">Agotado</span>
+                    </button>
+                    <div class="animateWrapper" data-ob-directive="WishList.AddWishListDirective" data-ob-model="productJS" data-ob-params="{&quot;timeToHide&quot;:5000}">
+                        <button id="addToWishList" class="bgNoneProd  " type="button" style="outline: 0;"></button>
+                    </div>
+            </form>
+                </div>
+            </section>
+
+             
+
+
+
+
+        </article>
+    </main>
+
+                        <!-- Modal -->
+                        <!-- <div class="modal fade" id="productImage" role="dialog" style="top: 0">
+                            <button type="button" class="close" data-dismiss="modal" style="position: fixed; right: 2%; z-index: 99999; top: 7%; padding: 12px; font-size: 2.5em; color: #383838;">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                            <div class="modal-dialog" style="width: 100%; position: relative; margin: 0 auto;">
+                              <div class="modal-content">
+                                  <div class="modal-body">
+                                      <div id="Div1" data-ob-directive="Product.CarrouselDirective" style="position: relative; float: left; width: 10%;">
+                                          <a href="#">
+                                              <img src="img/choose1.jpg" class="img-responsive thumbnails selected" alt="">
+                                          </a>
+                                          <a href="#">
+                                              <img src="img/choose2.jpg" class="img-responsive thumbnails " alt="">
+                                          </a>
+                                          <a href="#">
+                                              <img src="img/choose3.jpg" class="img-responsive thumbnails " alt="">
+                                          </a>
+                                      </div> -->
+    
+                                      <!-- Carousel for the zoom images-->
+                                      <!-- <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="false" style="width: 88%; float: right;"> -->
+                                          <!-- Wrapper for slides -->
+                                          <!-- <div class="carousel-inner" role="listbox">
+                                              <div class="item active">
+                                                  <img src="img/choose1.jpg" class="img-responsive noTransp center-block" title="Crop top calado de ganchillo con flores en los tirantes " alt="Crop top calado de ganchillo con flores en los tirantes " data-dismiss="modal"/>
+                                              </div>
+                                              <div class="item">
+                                                  <img src="img/choose2.jpg" class="img-responsive noTransp center-block" title="Crop top calado de ganchillo con flores en los tirantes " alt="Crop top calado de ganchillo con flores en los tirantes " data-dismiss="modal"/>
+                                              </div>
+                                              <div class="item">
+                                                  <img src="img/choose3.jpg" class="img-responsive noTransp center-block" title="Crop top calado de ganchillo con flores en los tirantes " alt="Crop top calado de ganchillo con flores en los tirantes " data-dismiss="modal"/>
+                                              </div>
+                                          </div> -->
+    
+                                          <!-- Left and right controls -->
+                                          <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="top: 36%; color: #000; background: none; border:none; left: 1%;">
+                                              <i class="fa fa-angle-left" aria-hidden="true" style="font-size: 4em;"></i>
+                                          </a>
+                                          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="top: 36%; color: #000; background: none; border:none; right: 1%;">
+                                              <i class="fa fa-angle-right" aria-hidden="true" style="font-size: 4em;"></i>
+    
+                                          </a>
+                                      </div>
+                                  </div>
+                                  <div class="modal-footer" style="display: table; width: 100%;"> -->
+                                      <!-- <button type="button" class="btn btn light text-center center-block antiVoffset5" data-dismiss="modal">Close</button>-->
+                                  <!-- </div>
+                              </div>
+                            </div>
+                        </div> -->
+                        <!-- fin Modal-->
+                    <!-- </div>
+                </div>
+                <hr> --> <!--Producto -->
+    
+                <!-- <div class="row voffset2">
+                    <p>Referencia: <strong id="refName">MELROSE &reg; / Estructura Gruesa</strong></p>
+                    <p>Color: <strong>negro / antracita</strong></p>
+                </div> -->
+                <!-- Referencia -->
+    
+                <!-- <div class="row voffset2">
+                    <div class="col-md-4">
+                        <div class="propiertys">
+                            <p>Ref: <strong id="refName">MELROSE &reg; / Estructura Gruesa</strong></p>
+                            <hr>
+                            <div class="btn-group" data-ob-directive="Product.ColorDirective" data-ob-model="productJS">
+                                <button class="btn btn-default colorPicker selected" type="button">
+                                    <img class="img" src='http://www.venca.es/i/687398/ori/camiseta-sin-mangas-estampado-con-efecto-punto-de-cruz-blanco.jpg' title="blanco" alt="blanco" data-id="15C033963"/>
+                                </button>
+                                <button class="btn btn-default colorPicker " type="button">
+                                    <img class="img" src='http://www.venca.es/i/687401/ori/camiseta-sin-mangas-estampado-con-efecto-punto-de-cruz-verde-turquesa.jpg' title="verde turquesa" alt="verde turquesa" data-id="15C043020"/>
+                                </button>
+                                <button class="btn btn-default colorPicker " type="button">
+                                    <img class="img" src='http://www.venca.es/i/687403/ori/camiseta-sin-mangas-estampado-con-efecto-punto-de-cruz-coral.jpg' title="coral" alt="coral" data-id="15C043053"/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="propiertys">
+                            <p>microfibra PRIMABELLE &reg;</p>
+                            <hr>
+                            <div class="btn-group" data-ob-directive="Product.ColorDirective" data-ob-model="productJS">
+                                <button class="btn btn-default colorPicker selected" type="button">
+                                    <img class="img" src="http://www.venca.es/i/725699/ori/crop-top-calado-de-ganchillo-con-flores-en-los-tirantes-beige.jpg" title="beige" alt="beige" data-id="1T1023956">
+                                </button>
+                                <button class="btn btn-default colorPicker" type="button">
+                                    <img class="img" src="http://www.venca.es/i/728788/ori/crop-top-calado-de-ganchillo-con-flores-en-los-tirantes-blanco.jpg" title="blanco" alt="blanco" data-id="1T1023960">
+                                </button>
+                                <button class="btn btn-default colorPicker" type="button">
+                                    <img class="img" src="http://www.venca.es/i/725705/ori/crop-top-calado-de-ganchillo-con-flores-en-los-tirantes-negro.jpg" title="negro" alt="negro" data-id="1T1023998">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="propiertys">
+                            <p>Microfibra /Tejidos</p>
+                            <hr>
+                            <div class="btn-group" data-ob-directive="Product.ColorDirective" data-ob-model="productJS">
+                                    <button class="btn btn-default colorPicker" type="button">
+                                        <img class="img" src="http://www.venca.es/i/703681/ori/mono-largo-en-crepe-de-punto-anudado-a-la-espalda-burdeos.jpg" title="burdeos" alt="burdeos" data-id="1IW082295">
+                                    </button>
+                                    <button class="btn btn-default colorPicker  selected" type="button">
+                                        <img class="img" src="http://www.venca.es/i/703684/ori/mono-largo-en-crepe-de-punto-anudado-a-la-espalda-musgo.jpg" title="musgo" alt="musgo" data-id="1IW082333">
+                                    </button>
+                                    <button class="btn btn-default colorPicker " type="button">
+                                        <img class="img" src="http://www.venca.es/i/703686/ori/mono-largo-en-crepe-de-punto-anudado-a-la-espalda-negro.jpg" title="negro" alt="negro" data-id="1IW082345">
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Propiedades -->
+    
+                <!-- <div class="row voffset2 antiVoffset4">
+                    <div class="col-md-6">
+                        <div class="antiVoffset3" id="sizes" data-ob-directive="Product.SizeDirective" data-ob-model="productJS">
+                            <button type="button" data-toggle="dropdown" class="btn btn-block light dropdown-toggle voffset4 alert-tooltip" id="dropdownSize" data-original-title="Elige una talla" data-placement="left">
+                                <span id="selectedSize">Seleccionar Funcionalidad</span>
+                                <i class="fa fa-angle-down fa-fw pull-right voffset"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdownMoble">
+                                <li>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">Convertible en Cama</a>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">No Convertible en Cama</a>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">Con Rinconera</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="antiVoffset3" id="sizes" data-ob-directive="Product.SizeDirective" data-ob-model="productJS">
+                            <button type="button" data-toggle="dropdown" class="btn btn-block light dropdown-toggle voffset4 alert-tooltip" id="dropdownSize" data-original-title="Elige una talla" data-placement="left">
+                                <span id="selectedSize">Seleccionar Formato</span>
+                                <i class="fa fa-angle-down fa-fw pull-right voffset"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdownMoble">
+                                <li>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">Rinconera izquierda</a>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">Rinconera derecha</a>
+                                    <a href="#" tabindex="1" data-id="" data-id-for-select="-">Rinconera reposapies</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Funcionalidades -->
+    
+                <!-- <div class="row">
+                    <div class="col-md-12 antiVoffset4">
+                        <hr>
+                        <div class="thin antiVoffset2 voffset3 productFeatures">Detalles del producto</div>
+                        <div class="descriptionText">
+                            <p class="text-justify antiVoffset2">Asegura un ambiente armonioso en el salón: el sofá "Brighton" por el affaire Inicio. Opcionalmente equipada con una función de la cama un espacio para dormir a huéspedes durante la noche. El sentarse y dormir sofisticada comodidad está garantizada por la suspensión de eje sólido en combinación con un relleno de espuma de poliéster transpirable. La chaise longue puede ser opcional para la instalación de la izquierda o el orden correcto para que coincida con el entorno de visualización. El material de madera certificada FSC-acogedor sofá está disponible en diferentes variaciones de color y con diferentes calidades de referencia. Se puede adaptar en el acabado deseado perfectamente al gusto personal de la espalda y también en la sala. La sala de estar de buen gusto expandir el sofá "Brighton" por el affaire Inicio - opcionalmente con función de cama para huéspedes.</p>
+                            <ul>
+                                <li>Opcionalmente con la función de la cama</li>
+                                <li>Recamiere izquierda o derecha a elección</li>
+                                <li>3 calidades de referencia</li>
+                                <li>A partir de material de madera certificado FSC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr> -->
+                <!-- Detalles del producto -->
+    
+                <!-- <div class="row voffset3 antiVoffset3 hidden-xs" id="recommndations">
+                    <div class="thin productFeatures" style="padding-left:15px;">Quizás también te guste</div>
+                    <div class="col-md-4">
+                        <div class="voffset3 text-center">
+                            <a href="#" class="img-thumbnail" style="border: none">
+                                <img class="img-responsive img-thumbnail antiVoffset2" src="img/choose1.jpg" title="" alt="">
+                                <span class="cutText">Sofá 3 plazas rinconera</span>
+                                <span class="">262,99€</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="voffset3 text-center">
+                            <a href="#" class="img-thumbnail" style="border: none">
+                                <img class="img-responsive img-thumbnail antiVoffset2" src="img/choose3.jpg" title="" alt="">
+                                <span class="cutText">Sofá con Estantes y Baúl</span>
+                                <span class="">962,99€</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="voffset3 text-center">
+                            <a href="#" class="img-responsive img-thumbnail" style="border: none">
+                                <img class="img-responsive img-thumbnail antiVoffset2" src="img/choose2.jpg" title="" alt="">
+                                <span class="cutText">Sofá cama tipo Futón</span>
+                                <span class="">599,99€</span>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- More like -->
+            <!-- </div> -->
+    
+            <!-- <div class="col-md-3">
+                <section class="noMargins antiVoffset44" data-ob-var="var productJS=new ProductJS(Model)">
+                    <h1 class="block-subTitle">Sofa Corner "Dublín", opcionalmente con función de cama</h1>
+                    <div class="voffset2">ref:
+                        <span id="reference" >15C033963</span>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span id="integerPricePart" class="bigPrice thin">499</span><sup id="decimalPricePart" class="mediumPrice super">99€</sup>
+                            </li>
+                            <div class="storeFrontsPreviousPrice pull-right" id="previousPriceText">899,99€</div>
+                        </ul>
+                    </div>
+                    <form action="/Cart/AddProductByAjax" data-ob-directive="Product.AddProductDirective" data-ob-model="productJS" data-ob-params="{&quot;timeToHide&quot;:5000}" method="post"><input id="storefrontBreadCrumbId" name="storefrontBreadCrumbId" type="hidden" value="19" />
+                        <button id="addToBasket" class="btn btn-block btn-lg dark voffset3" type="button">
+                            Añadir a la cesta
+                            <i class="fa fa-angle-right fa-fw"></i>
+                        </button>
+                        <button type="button" class="btn btn-block btn-lg light voffset4" id="" data-original-title="Lista de deseos" data-placement="left">
+                            <span id="wishList">Wish List</span>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <div class="text-center voffset3">
+                        <a href="#" class="sharingbButton sharingBtnF "></a>
+                        <a href="#" class="sharingbButton sharingBtnT"></a>
+                        <a href="#" class="sharingbButton sharingBtnP"></a>
+                        <a href="#" class="sharingbButton sharingBtnS"></a>
+                    </div>
+                </section>
+                <hr> -->
+    
+                <!-- <section>
+                    <div class="antiVoffset2">
+                        <div class="antiVoffset2 ">
+                           <div class="thin productFeatures">Nuestras clientas opinan</div>
+                            <p class="small text-center voffset2">Valoración:
+                                <span>3,93</span> de
+                                <span>5</span> (<span>27 opiniones</span>)
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="dropdown"  id="reviewsSorter" data-ob-directive="Product.ReviewsDirective" data-ob-params="{&quot;id&quot;:&quot;113185&quot;,&quot;limit&quot;:&quot;10&quot;,&quot;total&quot;:27,&quot;reviewsByPage&quot;:10}">
+                                <button class="btn btn-sm dropdown-toggle light" data-toggle="dropdown" id="dropdownMenu1" type="button">
+                                    <span id="selectedSort" data-sort="Rating:desc">Ordenar por</span>
+                                    <i class="fa fa-angle-down fa-fw"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" tabindex="-1" data-sort="Rating:desc">de mayor a menor</a></li>
+                                    <li><a href="#" tabindex="-1" data-sort="Rating:asc">de menor a mayor</a></li>
+                                    <li><a href="#" tabindex="-1" data-sort="SubmissionTime:desc">Fecha más reciente</a></li>
+                                    <li><a href="#" tabindex="-1" data-sort="SubmissionTime:asc">Fecha más antigua</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reviews">
+                        <div class="collapseForum0 row collapse"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 clickable" data-target=".collapseForum3" data-toggle="collapse">
+                                <div class="productDetails">
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                </div>
+                                <br>
+                                <p>Calidad y precio perfecto </p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <p class=" text-right pull-right voffset3">
+                                    <strong></strong><br>
+                                    <small>21 de julio de 2016<br><br></small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapseForum1 row collapse"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 clickable" data-target=".collapseForum4" data-toggle="collapse">
+                                <div class="productDetails">
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                </div>
+                                <br>
+                                <p>El producto es c&#243;modo, el largo me gusta, es fina, el dibujo me gusta,y se transparenta poco ,muy ponible </p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <p class=" text-right pull-right voffset3">
+                                    <strong></strong><br>
+                                    <small>22 de julio de 2016<br><br></small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapseForum2 row collapse"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 clickable" data-target=".collapseForum5" data-toggle="collapse">
+                                <div class="productDetails">
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                </div>
+                                <br>
+                                <p>Camiseta sin grandes pretensiones con un dibujo que luce mucho y le da vida a cualquier pantal&#243;n corto o largo que te pongas</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <p class=" text-right pull-right voffset3">
+                                    <strong></strong><br>
+                                    <small>24 de julio de 2016<br><br></small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapseForum3 row collapse"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 clickable" data-target=".collapseForum6" data-toggle="collapse">
+                                <div class="productDetails">
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                </div>
+                                <br>
+                                <p>Calidad precio, muy bien. Comodidad perfecta.</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <p class=" text-right pull-right voffset3">
+                                    <strong></strong><br>
+                                    <small>27 de julio de 2016<br><br></small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapseForum4 row collapse"></div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 clickable" data-target=".collapseForum7" data-toggle="collapse">
+                                <div class="productDetails">
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                    <i class="fa fa-star fa-x1 vencaColor"></i>
+                                </div>
+                                <br>
+                                <p>Es muy juvenil</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                                <p class=" text-right pull-right voffset3">
+                                    <strong></strong><br>
+                                    <small>8 de agosto de 2016<br><br></small>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="text-center">
+                        <input id="offset" name="offset" type="hidden" value="0" />
+                        <div data-ob-directive="Product.ReviewsDirective" data-ob-params="{&quot;id&quot;:&quot;113185&quot;,&quot;limit&quot;:&quot;10&quot;,&quot;total&quot;:27,&quot;reviewsByPage&quot;:10}">
+                            <button id="moreReviews" class="btn light voffset3">
+                                ver más<i class="fa fa-angle-right fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div> -->
+            <!-- Aside -->
+       
+        
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="../wwwroot/js/main.js"></script>
+
+    <script>
+       
+    </script>
+
+</body>
+</html>

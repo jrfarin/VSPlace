@@ -1,0 +1,99 @@
+#vcProduct a.openZoom {
+    cursor: url("../../img/plus-zoom.png"), auto
+}
+#vcProduct #productZoom button.close {
+    position: absolute;
+    top: -1%;
+    right: 3%;
+    z-index: 1055
+}
+#vcProduct .superPriceTag,
+#vcProduct .discountTag {
+    position: absolute;
+    bottom: 5%;
+    background: #ff0000;
+    color: #fff;
+    padding: .25rem .5rem
+}
+#vcProduct #modalChooseSize ul>li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+    padding: .75rem .5rem
+}
+#vcProduct #sizes ul>li {
+    padding: .75rem .5rem
+}
+#vcProduct .btn-dark:hover {
+    background-color: #aa0061 !important
+}
+#vcProduct #integerPricePart::after {
+    content: ","
+}
+#vcProduct #addToBasket span.add {
+    display: block
+}
+#vcProduct #addToBasket span.added {
+    display: none
+}
+#vcProduct #addToBasket.active {
+    background: #aa0061 !important
+}
+#vcProduct #addToBasket.active>span.add {
+    display: none
+}
+#vcProduct #addToBasket.active>span.added {
+    display: block
+}
+#vcProduct .btn-custom {
+    background: #aa0061 !important
+}
+#vcProduct .borderWhatIsThat {
+    border: 6px double gray
+}
+#vcProduct .nav-pills .nav-link {
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    background-color: #dee2e6;
+    color: #1c1c1c
+}
+#vcProduct .nav-pills .nav-link.active,
+#vcProduct .nav-pills .show>.nav-link {
+    background-color: #bbc3cc
+}
+#vcProduct #addProd {
+    top: 7%;
+    right: 15.5%;
+    max-width: 340px
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    #vcProduct #addProd {
+        right: 2.5%
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #vcProduct .mt-pdp {
+        margin-top: .5rem !important
+    }
+}
+
+@media (max-width: 767px) {
+    .add-button-mb {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 55px;
+        background: white;
+        z-index: 1040
+    }
+
+    .border-bottom-sm {
+        border-bottom: 1px solid #dedede
+    }
+}

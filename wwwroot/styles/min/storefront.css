@@ -1,0 +1,161 @@
+#vcStorefronts .storefront-title {
+    position: absolute;
+    top: 1%;
+    z-index: 1100
+}
+#vcStorefronts .storefront-description {
+    position: absolute;
+    top: 35%;
+    margin-left: 22%
+}
+#vcStorefronts .custom-control-label {
+    padding-top: 5px
+}
+#vcStorefronts #storeSorting ul {
+    min-width: 7.25rem
+}
+#vcStorefronts #storeSorting ul li {
+    padding: .35rem
+}
+#vcStorefronts #storeSorting ul li span {
+    outline: none
+}
+#vcStorefronts .main-zone {
+    padding-top: .65rem
+}
+#vcStorefronts .vc-panel {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out
+}
+#vcStorefronts .fixedBtnsFilters {
+    position: fixed;
+    bottom: .25rem;
+    background: #fff;
+    width: 100%;
+    margin-left: -4%;
+    padding: 0 .5rem
+}
+#vcStorefronts .relatedStorefront a {
+    border-top: 1px solid #dee2e6;
+    padding: .85rem 0 !important
+}
+#vcStorefronts .relatedStorefront a:hover {
+    text-decoration: none
+}
+#vcStorefronts label.colorButton {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border: 1px solid gray
+}
+#vcStorefronts label.colorButton:hover {
+    border-color: #1c1c1c;
+    border-width: 2px
+}
+#vcStorefronts [data-toggle="buttons"]>.btn>input[type="checkbox"] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0
+}
+#vcStorefronts #filter-sizes label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 22%;
+    margin: 0.1925rem
+}
+#vcStorefronts #filter-sizes label input[type="checkbox"]+label {
+    background: none;
+    cursor: pointer;
+    padding-left: 0
+}
+#vcStorefronts #filter-sizes label input[type="checkbox"]:checked+label {
+    background: none
+}
+#vcStorefronts .oneColumn img {
+    width: 100%
+}
+#vcStorefronts .col-12>a>.square-frame {
+    width: 330px;
+    height: 330px
+}
+#vcStorefronts .square-frame {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 255px;
+    height: 255px
+}
+#vcStorefronts .square-frame+div {
+    padding: .5rem 0 1.5rem 1rem
+}
+#vcStorefronts .noUi-connect {
+    background: #1c1c1c
+}
+#vcStorefronts .noUi-handle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%
+}
+#vcStorefronts .noUi-horizontal {
+    height: 5px
+}
+#vcStorefronts .noUi-horizontal .noUi-handle {
+    top: -15px
+}
+#vcStorefronts .noUi-horizontal .noUi-handle:before,
+#vcStorefronts .noUi-horizontal .noUi-handle:after {
+    background: #fff
+}
+#vcStorefronts .noUi-touch-area:focus {
+    border: none;
+    outline: none
+}
+#vcStorefronts ul.selectedFilters {
+    margin: -5px
+}
+#vcStorefronts ul.selectedFilters li {
+    padding: 2px;
+    margin: 5px
+}
+#vcStorefronts ul.selectedFilters li li {
+    margin-left: 5px
+}
+#vcStorefronts [data-toggle="collapse"]:not(.collapsed)+.selectedFilters {
+    display: none
+}
+#vcStorefronts span[data-function="clear"]:hover,
+#vcStorefronts #clearFilters:hover {
+    color: #aa0061;
+    cursor: pointer
+}
+#vcStorefronts #filter-sizes-DK label.active {
+    background: #1c1c1c;
+    color: #fff
+}
+#vcStorefronts div.storeFrontsFilterColors label.active {
+    background-image: url("/img/checked.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important
+}
+#vcStorefronts .mh-125 {
+    max-height: 125px !important
+}
+
+
+

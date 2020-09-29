@@ -1,0 +1,41 @@
+// ===== Login ===== //
+section#vcLogin {
+    .md-form .prefix {
+        top: 1rem;
+        right: 0;
+        font-size: 1rem;
+    }
+    li.nav-item {
+        background-color: $colorBgButtonHover;
+        .nav-link {
+            border-radius: 0;           
+        }
+        .nav-link.active {
+            background-color: $colorBgButton;
+        } 
+    }  
+}
+
+// ===== Register ===== //
+section#vcRegister {
+    .md-form input:focus {
+        border-bottom: 1px solid #848484;
+        box-shadow: none;
+    }
+    i#showPassword {
+        position: absolute;
+        top: 22%;
+        right: 0;
+    }
+    i#calendar {
+        position: absolute;
+        top: 35%;
+        right: 0;
+    }
+    label {
+        color: $colorLabelForm;
+    }
+}
+#ui-datepicker-div {
+    top: 64% !important;
+} 

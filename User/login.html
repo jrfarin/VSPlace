@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Venca Place</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../wwwroot/styles/css/main.min.css">    
+</head>
+
+<body>
+    <main class="container mt-5 mb-5">
+        <section class="row" id="vcLogin">
+            <div class="col col-md-6 offset-md-3">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item mr-1">
+                        <a class="nav-link text-uppercase active" id="nav-olduser-tab" data-toggle="tab" href="#oldUser" role="tab">Ya soy cliente</a>
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a class="nav-link text-uppercase" id="nav-newuser-tab" data-toggle="tab" href="#newUser" role="tab">Soy nuevo</a>
+                    </li>
+                </ul>
+    
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <!-- Customer Already -->
+                    <div class="tab-pane fade show active" id="oldUser" role="tabpanel" aria-labelledby="nav-olduser-tab">
+                        <div class="oldUser col-md-12">
+                            <form action="/login"  method="post">
+                                <!-- E-mail -->
+                                <div class="md-form">
+                                    <i class="far fa-envelope prefix"></i>
+                                    <input class="form-control ml-0" id="EmailLogin" name="EmailLogin" type="email">
+                                    <label class="ml-0" for="EmailLogin">E-mail</label>
+                                </div>
+                                <!-- Password -->
+                                <div class="md-form">
+                                    <i class="far fa-eye prefix" id="showPassword"></i>
+                                    <input class="form-control  ml-0" id="Password" name="Password" type="password">
+                                    <label class="ml-0" for="Password">Contraseña</label>
+                                </div>
+                                <div class="mt-20">
+                                    <button type="submit" class="btn btn-dark vc-button FS-25vh shadow-none">Entrar</button>
+                                </div>
+                                <div class="mt-2">
+                                    <p class=" font-weight-light text-center cPointer" id="toForgotPw">¿Has olvidado la contraseña?</p>
+                                </div>
+                                <!-- Horizontal Line Separator-->
+                                <div class="row mt-5">
+                                    <div class="col-5">
+                                        <hr>
+                                    </div>
+                                    <div class="col-2">
+                                        <p class="lead thin text-center">O</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <hr>
+                                    </div>
+                                    <div class="col">
+                                        <p class="lead thin text-center text-uppercase">Accede con...</p>
+                                    </div>
+                                </div>
+                                <!-- Login Facebook -->
+                                <div class="facebook-connect text-center mt-2">
+                                    <img src="https://venca.es/Content/images/loginBtnFacebook.png" alt="Venca Facebook" class="img-fluid" onclick="javascript: LoginFB();">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- New Customer -->
+                    <div class="tab-pane fade" id="newUser" role="tabpanel" aria-labelledby="nav-newuser-tab">
+                        <div id="newUser" class="newUser col-md-12">
+                            <form action="/login" method="post">                         
+                                <div class="mt-5">
+                                    <button type="submit" class="btn btn-dark vc-button FS-25vh shadow-none" id="toRegister">crear mi cuenta</button>
+                                </div>
+                                <!-- Horizontal Line Separator-->
+                                <div class="row mt-5">
+                                    <div class="col-sm-5">
+                                        <hr>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="lead thin text-center">O</p>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <hr>
+                                    </div>
+                                    <div class="col">
+                                        <p class="lead thin text-center text-uppercase">Crea tu cuenta con...</p>
+                                    </div>
+                                </div>
+                                <!-- Login Facebook -->
+                                <div class="facebook-connect text-center mt-2">
+                                    <img src="https://venca.es/Content/images/loginBtnFacebook.png" alt="Venca Facebook" class="img-fluid" onclick="javascript: LoginFB();">
+                                </div>                          
+                            </form>    
+                        </div>    
+                    </div>
+                </div>
+            </div>       
+        </section>
+    </main>
+        
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="../wwwroot/js/main.js"></script>
+
+    <script>
+        // Locations
+        document.getElementById('toForgotPw').addEventListener('click', function() {
+            location.href = "forgotPassword.html";
+        });
+        document.getElementById('toRegister').addEventListener('click', function() {
+            location.href = "register.html";
+        });
+
+        // Show/Hide Password
+        const $this = document.getElementById('showPassword');
+        $this.onclick = function() {
+            showPassword()
+        };
+
+        function showPassword() {
+            let inputPassword = document.getElementById('Password');
+            if (inputPassword.type === "password") {
+                inputPassword.type = "text";
+            } else {
+                inputPassword.type = "password";
+            }
+            $this.classList.toggle('fa-eye-slash');
+        }
+    </script>
+
+</body>
+</html>

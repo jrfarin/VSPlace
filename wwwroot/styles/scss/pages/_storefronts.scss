@@ -1,0 +1,183 @@
+#vcStorefronts {
+    .storefront-title {
+        position: absolute;
+        top: 1%;
+        z-index: 1100;
+        @include phone {       
+            position: static;
+            z-index: 0;
+            font-size: .9rem;
+            font-weight: bold;
+        }
+        @include tablet {
+            position: static;
+            z-index: 0;
+        }
+    }
+    .storefront-description {
+        position: absolute;
+        top: 35%;
+        margin-left: 22%;
+    }
+    .custom-control-label {
+        padding-top: 5px;
+    }
+    #storeSorting ul {
+        @include minWidth(7.25rem);
+        li {
+            padding: .35rem;
+            span {
+               outline: none;
+           }
+        }
+    }
+    .main-zone {
+        padding-top: .65rem;
+        @include phone {
+            padding-top: 0;
+        }    
+    }
+    .vc-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .fixedBtnsFilters {
+        position: fixed;
+        bottom: .25rem;
+        background: #fff;
+        width: 100%;
+        margin-left: -4%;
+        padding: 0 .5rem;
+    }
+    .relatedStorefront a {
+        border-top: $borderBottom;
+        padding: .85rem 0 !important;
+        &:hover {
+            text-decoration: none;
+        }
+        @include noPhone {
+            border-top: none;
+            border-bottom: $borderBottom;  
+        }  
+        span {
+            @include noPhone {
+                font-size: 1rem;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+        }   
+    }
+    label.colorButton {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+        border: $borderBottomDark;
+        &:hover {
+            border-color: $colorLinkHover;
+            border-width: 2px;
+        }
+    }
+    [data-toggle="buttons"] > .btn > input[type="checkbox"] {
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+    }
+    #filter-sizes label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22%;
+        margin: 0.1925rem;
+        input[type="checkbox"] + label { 
+            background: none;
+            cursor: pointer;
+            padding-left: 0;
+        }
+        input[type="checkbox"]:checked + label {
+            background: none;
+        }
+    }
+    .oneColumn img {
+        width: 100%;
+    }
+    .col-12 > a > .square-frame {
+        width: 330px;
+        height: 330px;
+    }
+    .square-frame {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 255px;
+        height:255px;
+        @include laptop {
+            width: 210px;
+            height: 210px;
+        }
+        @include tablet {
+            width: 210px;
+            height: 210px;
+        }
+        @include phone {
+            width: 153px;
+            height: 153px;
+        }
+        & + div {
+            padding: .5rem 0 1.5rem 1rem; 
+        }
+    }
+    .noUi-connect {
+        background: $colorBgButton;
+    }
+    .noUi-handle {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+    }
+    .noUi-horizontal {
+        height: 5px;
+        .noUi-handle {
+            top: -15px;
+            &:before,
+            &:after {
+                background: #fff;
+            }
+        }
+    }
+    .noUi-touch-area:focus {
+        border: none;
+        outline: none;
+    }
+    ul.selectedFilters {
+        margin: -5px;
+        li {
+            padding: 2px;
+            margin: 5px;
+            li {
+                margin-left: 5px;
+            }
+        }
+    }
+    [data-toggle="collapse"]:not(.collapsed) + .selectedFilters {
+        display: none;
+    }
+    span[data-function="clear"]:hover,
+    #clearFilters:hover {
+        color: #aa0061;
+        cursor: pointer;
+    }
+    #filter-sizes-DK label.active {
+        background: #1c1c1c;
+        color: #fff;
+    }
+    div.storeFrontsFilterColors label.active {
+        background-image: url('/img/checked.png') !important; 
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    } 
+    .mh-125 {
+        max-height: 125px !important;
+    }   
+}
